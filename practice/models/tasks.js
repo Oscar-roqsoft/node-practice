@@ -2,8 +2,9 @@ const mongoose = require('mongoose')
 
 const TaskSchema = new mongoose.Schema({
     name: 
+    //validate name input value
     {
-        type: String, 
+        type: String,  
         required: [true,'must provide the name'],
         maxLength:20,
     },

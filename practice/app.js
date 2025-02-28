@@ -8,6 +8,9 @@ const bodyParser = require("body-parser");
 // const authRoutes = require("./routes/auth/auth");
 const taskRoutes = require("./routes/tasks");
 
+const notFound = require('./middleware/not-found')
+const errorHandlers = require('./middleware/errors')
+
 dotenv.config();
 
 mongoose
@@ -44,7 +47,10 @@ app.use((req, res, next) => {
 
 
 app.use(express.json());
-app.use("/api/v1/", taskRoutes);
+app.use("/api/v1/", taskRoutes)
+app.use(notFound);
+app.use(errorHandlers);
+
 // app.use("/auth", authRoutes);
 // app.use("/user", userRoutes);
 
