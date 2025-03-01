@@ -8,6 +8,7 @@
   "scripts": {
     "start": "nodemon app.js"
   },
+  
   "author": "oscartech",
   "license": "ISC",
   "dependencies": {
@@ -31,4 +32,5 @@
     "nodemon": "^3.0.1"
   }
 }
+
 
