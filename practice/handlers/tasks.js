@@ -19,6 +19,11 @@ const {createCustomError,CustomApiError} = require('../errors/custom-error');
 // }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f46f282 (Initial commit)
 // with asyncwrapper middleware
 const getAllTask = asyncwrapper(async(req,res)=>{
         const task = await tasks.find(); // Fetch all tasks from the database
